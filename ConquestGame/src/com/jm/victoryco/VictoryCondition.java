@@ -5,6 +5,7 @@ import com.jm.obj.board.Board;
 
 public abstract class VictoryCondition {
     // trigger when
+	
 	VictoryConTrigEnum victoryConTrigEnum;
 	
 	public boolean isWin(Board board){return false;}
