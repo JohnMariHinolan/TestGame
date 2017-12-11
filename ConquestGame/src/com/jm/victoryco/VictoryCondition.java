@@ -1,8 +1,13 @@
 package com.jm.victoryco;
 
-public abstract class VictoryCondition {
+import com.jm.config.VictoryConTrigEnum;
+import com.jm.obj.board.Board;
 
-	public boolean isWin(){return false;}
+public abstract class VictoryCondition {
+    // trigger when
+	VictoryConTrigEnum victoryConTrigEnum;
 	
+	public boolean isWin(Board board){return false;}
+	public boolean isLoose(Board board) {return false;}
 	
 }
