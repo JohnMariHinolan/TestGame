@@ -1,5 +1,5 @@
 package com.jm.obj.board;
 
-public class Board {
+public class FieldUnit {
 
 }

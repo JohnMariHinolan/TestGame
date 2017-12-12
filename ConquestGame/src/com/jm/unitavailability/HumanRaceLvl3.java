@@ -1,10 +1,10 @@
 package com.jm.unitavailability;
 
+import com.jm.card.obj.unit.HumanUnitFactory;
+import com.jm.card.obj.unit.Unit;
 import com.jm.config.UnitNameEnum;
-import com.jm.obj.unit.HumanUnitFactory;
-import com.jm.obj.unit.Unit;
 
-public class HumanUnitsLvl3 extends HumanUnitsLvl2{
+public class HumanRaceLvl3 extends HumanRaceLvl2{
 
 	@Override
 	public void addAll() {

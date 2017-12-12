@@ -1,0 +1,29 @@
+Game/Board will consist of 2 players
+Each player has currency and available units.
+Board has 10 unit field and 10 bldg field
+Each Field can contain a card. Each Field has a  type(bldg,unit)
+Each field has a terrain type, every change should also change the card terrain(may trigger abilities, status)
+Each Field has an owner.
+Each card has an owner. 
+players can only control cards he owns.
+players can only set cards on field he owns.
+Player has 1 hero
+hero has available unit/bldgs
+
+
+
+Abilities:
+On passive:
+
+passive abilities should just give unseen and unremovable statuses to the card.
+triggers for every move.
+
+trigger idea: each card have a list of statuses and abilities.
+			  each action shall always cause this list to be triggered(trigger type should be passed as argument) 
+EventManager?
+
+
+Mediator Pattern:
+
+
+

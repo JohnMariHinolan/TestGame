@@ -2,8 +2,15 @@ package com.jm.card;
 
 import java.util.UUID;
 
+import com.jm.obj.board.FieldInfo;
+import com.jm.obj.board.Player;
+
 public abstract class Card {
 
+	// current Owner of the card
+	
+	private Player player;
+	
 	
 	UUID uuid = java.util.UUID.randomUUID();
 	
@@ -12,13 +19,22 @@ public abstract class Card {
 	private String lore;
 	private String name;
 	
+	private FieldInfo fieldInfo;
+	
+	
+	
+	
+	private  boolean isUnderPenalty;
 	
 	public void damageReceived(){
-		
+		//effect here
 	}
 	
 	// use design pattern
-	public void destroy(){}
+	public void destroy(){
+		
+		
+	}
 
 	public String getArtwork() {
 		return artwork;
@@ -47,8 +63,48 @@ public abstract class Card {
 	
 	
 	
+	public boolean isUnderPenalty() {
+		return isUnderPenalty;
+	}
+
+	public void setUnderPenalty(boolean isUnderPenalty) {
+		this.isUnderPenalty = isUnderPenalty;
+	}
+
 	public boolean isEquals(UUID uuid) {
 		return this.uuid == uuid;
 	}
+
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
+	}
+
+	
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
+
+	public FieldInfo getFieldInfo() {
+		return fieldInfo;
+	}
+
+	public void setFieldInfo(FieldInfo fieldInfo) {
+		this.fieldInfo = fieldInfo;
+	}
+
+	
+	
+	
+	
+	
 	
 }

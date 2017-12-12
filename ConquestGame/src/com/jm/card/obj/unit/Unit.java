@@ -1,4 +1,4 @@
-package com.jm.obj.unit;
+package com.jm.card.obj.unit;
 
 import java.util.List;
 
@@ -17,6 +17,8 @@ public class Unit extends Card {
 	private RaceEnum race;
 	private List<Ability> cardAbilities;
 	private List<Status> cardStatus;
+	
+	private int maintenanceCost;
 	
 	
 	
@@ -79,8 +81,25 @@ public class Unit extends Card {
 	public boolean isSameType(RaceEnum race) {
 		return this.race == race;
 		
+	}
+	public int getMaintenanceCost() {
+		return maintenanceCost;
+	}
+	public void setMaintenanceCost(int maintenanceCost) {
+		this.maintenanceCost = maintenanceCost;
 	}  
 	
 	
+	@Override
+	public void destroy() {
+		
+		reset() ;
+	
+	}
+	
+	private void reset() {
+		
+		
+	}
 	
 }

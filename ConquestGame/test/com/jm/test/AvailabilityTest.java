@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.jm.obj.unit.Unit;
-import com.jm.unitavailability.HumanUnitsLvl1;
-import com.jm.unitavailability.HumanUnitsLvl2;
+import com.jm.card.obj.unit.Unit;
+import com.jm.unitavailability.HumanRaceLvl1;
+import com.jm.unitavailability.HumanRaceLvl2;
 
 public class AvailabilityTest {
 
@@ -17,7 +17,7 @@ public class AvailabilityTest {
 	@Test
 	public void humanLvl1Count() {
 		
-		HumanUnitsLvl1 humanLvl1 = new HumanUnitsLvl1();
+		HumanRaceLvl1 humanLvl1 = new HumanRaceLvl1();
 		humanLvl1.addAll();
 		List<Unit> humanList= humanLvl1.getAvailableUnits();
 		int availableUnitCount = humanLvl1.getAvailableUnits().size();
@@ -29,7 +29,7 @@ public class AvailabilityTest {
 	@Test
 	public void humanLvl2Count() {
 		
-		HumanUnitsLvl2 humanLvl2 = new HumanUnitsLvl2();
+		HumanRaceLvl2 humanLvl2 = new HumanRaceLvl2();
 		humanLvl2.addAll();
 		List<Unit> humanList= humanLvl2.getAvailableUnits();
 		int availableUnitCount = humanLvl2.getAvailableUnits().size();

@@ -1,8 +1,8 @@
 package com.jm.unitavailability;
 
-import com.jm.obj.unit.Unit;
+import com.jm.card.obj.unit.Unit;
 
-public abstract class HumanBase extends UnitAvailability {
+public abstract class HumanBase extends RaceAvailability {
 
 	
 	
