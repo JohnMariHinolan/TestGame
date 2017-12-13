@@ -72,7 +72,7 @@ public class Player {
 	}
 	
 	
-	public void attack() {
+	public void play() {
 	
 	
 	}

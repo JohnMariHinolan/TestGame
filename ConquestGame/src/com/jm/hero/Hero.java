@@ -1,15 +1,20 @@
 package com.jm.hero;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.jm.card.obj.unit.Unit;
-import com.jm.config.HeroEnum;
+import com.jm.config.CurrencyTypeEnum;
+import com.jm.currency.Currency;
 import com.jm.obj.ability.Ability;
 import com.jm.victoryco.VictoryCondition;
 
 public class Hero {
 
 	private int heroHp;
+	
+
+	private List<Currency> currencyList;
 
 	private List<Unit> availableUnit ;
 	
@@ -52,7 +57,45 @@ public class Hero {
 	public void setHeroAbilityList(List<Ability> heroAbilityList) {
 		this.heroAbilityList = heroAbilityList;
 	}
+
+	public void addCurrency(Currency currency) {
+		
+		currencyList.add(currency);
+	}
 	
+	public void addAmount(CurrencyTypeEnum currencyTypeEnum ,double amount) {
+		// trigger 
+		Currency cur =currencyList.stream().filter(	(Currency c) -> {
+			return c.getCurrencyTypeEnum() == currencyTypeEnum;
+			
+		}).findFirst().get();
+		
+	
+		cur.addAmount(amount);
+		
+	}
+	
+	public void minusAmount(CurrencyTypeEnum currencyTypeEnum ,double amount) {
+		// trigger 
+		
+		Currency cur =currencyList.stream().filter(	(Currency c) -> {
+			return c.getCurrencyTypeEnum() == currencyTypeEnum;
+			
+		}).findFirst().get();
+		
+	
+		cur.minusAmount(amount);
+			}
+	
+	public boolean canBuy(CurrencyTypeEnum currencyTypeEnum  , double amount) {
+		Currency cur =currencyList.stream().filter(	(Currency c) -> {
+			return c.getCurrencyTypeEnum() == currencyTypeEnum;
+			
+		}).findFirst().get();
+		
+	
+		return cur.canBuy(amount);
+	}
 	
 	
 }

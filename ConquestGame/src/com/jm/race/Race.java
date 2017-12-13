@@ -18,5 +18,21 @@ public abstract class Race {
 		this.logoList.add(logo);		
 	};
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<Logo> getLogoList() {
+		return logoList;
+	}
+
+	public void setLogoList(List<Logo> logoList) {
+		this.logoList = logoList;
+	}
+
 	public abstract void build();
 }

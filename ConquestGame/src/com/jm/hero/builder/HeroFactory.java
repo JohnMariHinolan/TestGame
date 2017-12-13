@@ -27,6 +27,10 @@ public class HeroFactory {
 	
 	private Hero createSnake() {
 		Hero hero = new Hero();
+		
+		
+		
+		
 		HumanRaceLvl3 humanLvl3 = new HumanRaceLvl3();
 		humanLvl3.addAll();
 		List<Unit> humanList= humanLvl3.getAvailableUnits();
