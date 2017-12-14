@@ -10,6 +10,8 @@ players can only set cards on field he owns.
 Player has 1 hero
 hero has available unit/bldgs
 
+Need something random.
+Field has random bonus yield
 
 
 Abilities:

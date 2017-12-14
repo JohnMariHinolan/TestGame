@@ -16,6 +16,9 @@ public abstract class Card {
 	
 	
 	private String artwork;
+	private String cardDescription;
+	
+
 	private String lore;
 	private String name;
 	
@@ -101,7 +104,13 @@ public abstract class Card {
 		this.fieldInfo = fieldInfo;
 	}
 
-	
+	public String getCardDescription() {
+		return cardDescription;
+	}
+
+	public void setCardDescription(String cardDescription) {
+		this.cardDescription = cardDescription;
+	}
 	
 	
 	

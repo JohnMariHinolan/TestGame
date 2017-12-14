@@ -1,15 +1,15 @@
 package com.jm.hero;
 
 import java.util.List;
-import java.util.Optional;
 
+import com.jm.card.Card;
 import com.jm.card.obj.unit.Unit;
 import com.jm.config.CurrencyTypeEnum;
 import com.jm.currency.Currency;
 import com.jm.obj.ability.Ability;
 import com.jm.victoryco.VictoryCondition;
 
-public class Hero {
+public class Hero extends Card{
 
 	private int heroHp;
 	
@@ -25,6 +25,10 @@ public class Hero {
 	//private List<>
 	
 	//public abstract void build();
+	
+	public void draw(int turnNum) {
+		
+	}
 
 	public int getHeroHp() {
 		return heroHp;

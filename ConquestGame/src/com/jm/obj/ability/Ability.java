@@ -1,14 +1,21 @@
 package com.jm.obj.ability;
 
 import com.jm.config.AbilityType;
+import com.jm.obj.board.Player;
 
-public abstract class Ability {
+public class Ability {
 	private String abilityName;
 	private AbilityType abilityType;
+	private AbilityActivation abilityActivation;
 	
-	public abstract void activate();
+	
+	// should be a list of card 
+	public void activate(Player player,CardPicker card) {
+		
+		abilityActivation.activate(player,card);
+	};
+	
 
-	
 	
 	public String getAbilityName() {
 		return abilityName;
@@ -25,6 +32,15 @@ public abstract class Ability {
 	public void setAbilityType(AbilityType abilityType) {
 		this.abilityType = abilityType;
 	}
+
+	public AbilityActivation getAbilityActivation() {
+		return abilityActivation;
+	}
+
+	public void setAbilityActivation(AbilityActivation abilityActivation) {
+		this.abilityActivation = abilityActivation;
+	}
+	
 	
 	
 	

@@ -11,7 +11,7 @@ public class Player {
 //
 	private GameStatusEnum gameStatusEnum;
 	private Player enemyPlayer;
-	
+	private int turnNum = 0;
 	
 	
 	
@@ -73,7 +73,10 @@ public class Player {
 	
 	
 	public void play() {
-	
+		turnNum++;
+		hero.draw(turnNum);
+		
+		
 	
 	}
 	// players turn phases is here  

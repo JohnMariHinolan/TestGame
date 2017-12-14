@@ -20,6 +20,7 @@ public class AvailabilityTest {
 		HumanRaceLvl1 humanLvl1 = new HumanRaceLvl1();
 		humanLvl1.addAll();
 		List<Unit> humanList= humanLvl1.getAvailableUnits();
+		
 		int availableUnitCount = humanLvl1.getAvailableUnits().size();
 		humanList.stream().forEach(System.out::println);
 	
