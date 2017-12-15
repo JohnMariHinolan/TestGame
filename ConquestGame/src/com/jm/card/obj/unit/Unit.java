@@ -3,6 +3,7 @@ package com.jm.card.obj.unit;
 import java.util.List;
 
 import com.jm.card.Card;
+import com.jm.cardexp.CardExp;
 import com.jm.config.RaceEnum;
 import com.jm.obj.ability.Ability;
 import com.jm.obj.status.Status;
@@ -15,6 +16,8 @@ public class Unit extends Card {
 	private int def;
 	private boolean move;
 	private RaceEnum race;
+	// modify by 
+	private CardExp cardExp;
 	private List<Ability> cardAbilities;
 	private List<Status> cardStatus;
 	
@@ -22,6 +25,12 @@ public class Unit extends Card {
 	
 	
 	
+	public CardExp getCardExp() {
+		return cardExp;
+	}
+	public void setCardExp(CardExp cardExp) {
+		this.cardExp = cardExp;
+	}
 	public int getAttack() {
 		return attack;
 	}

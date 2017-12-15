@@ -13,6 +13,12 @@ hero has available unit/bldgs
 Need something random.
 Field has random bonus yield
 
+Free card system
+A free card will be added to your hands(free card list) 
+Free cards are created on Unit availability list
+Free card tier lvl can be upgraded 
+
+
 
 Abilities:
 On passive:
@@ -25,7 +31,39 @@ trigger idea: each card have a list of statuses and abilities.
 EventManager?
 
 
-Mediator Pattern:
+Mediator Pattern Use in chats 
+
+Example:
+
+interface Mediator{
+
+addUser
+sendMessage(String Message, User user)
+
+}
+
+Class User{
+// initialize on constructor
+Mediator meditator
+
+void Send
+void Receive
+
+}
+
+pubic class ConcreteMediator impl chatMediator{
+
+List User
+
+@Override
+addUser
+
+@Override 
+sendMsg
+// all user recives
+
+
+}
 
 
 

@@ -6,6 +6,7 @@ import java.util.List;
 import com.jm.card.obj.bldg.Building;
 import com.jm.card.obj.unit.Unit;
 import com.jm.obj.ability.Ability;
+import com.jm.obj.ability.AbilityTree;
 import com.jm.victoryco.VictoryCondition;
 
 public abstract class RaceAvailability {
@@ -15,7 +16,7 @@ public abstract class RaceAvailability {
 	private List<Building> availableBuildings = new ArrayList<>();
 	private List<Ability> raceAbility = new ArrayList<>();
 	private List<VictoryCondition> raceVC = new ArrayList<>();
-	
+	private AbilityTree abilityTree;
 	
 	public  void addAll() {};
 	

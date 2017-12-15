@@ -2,6 +2,7 @@ package com.jm.card;
 
 import java.util.UUID;
 
+import com.jm.obj.ability.AbilityTree;
 import com.jm.obj.board.FieldInfo;
 import com.jm.obj.board.Player;
 
@@ -23,6 +24,10 @@ public abstract class Card {
 	private String name;
 	
 	private FieldInfo fieldInfo;
+	
+	// for cards
+	private AbilityTree abilityTree;
+	
 	
 	
 	
@@ -110,6 +115,14 @@ public abstract class Card {
 
 	public void setCardDescription(String cardDescription) {
 		this.cardDescription = cardDescription;
+	}
+
+	public AbilityTree getAbilityTree() {
+		return abilityTree;
+	}
+
+	public void setAbilityTree(AbilityTree abilityTree) {
+		this.abilityTree = abilityTree;
 	}
 	
 	

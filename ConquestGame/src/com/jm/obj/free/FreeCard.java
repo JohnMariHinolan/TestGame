@@ -10,6 +10,14 @@ public class FreeCard extends Card {
 	// low level card cant be draw on the first turn
 	private int cardLvl;
 	
+	public int getCardLvl() {
+		return cardLvl;
+	}
+
+	public void setCardLvl(int cardLvl) {
+		this.cardLvl = cardLvl;
+	}
+
 	public void use() {}
 	
 	

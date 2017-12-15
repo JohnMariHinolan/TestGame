@@ -4,14 +4,17 @@ import java.util.List;
 
 import com.jm.card.Card;
 import com.jm.card.obj.unit.Unit;
+import com.jm.cardexp.DrawInfo;
 import com.jm.config.CurrencyTypeEnum;
 import com.jm.currency.Currency;
 import com.jm.obj.ability.Ability;
+import com.jm.obj.free.FreeCard;
 import com.jm.victoryco.VictoryCondition;
 
 public class Hero extends Card{
 
 	private int heroHp;
+
 	
 
 	private List<Currency> currencyList;
@@ -22,11 +25,28 @@ public class Hero extends Card{
 	
 	private List<Ability> heroAbilityList;
 	
+	private DrawInfo drawInfo;
+	
+	private List<FreeCard> drawedCard;
+	
 	//private List<>
 	
 	//public abstract void build();
 	
-	public void draw(int turnNum) {
+	// select an upgrade... could be level or freeCard tier
+	// cost/ currency type depends on the Hero depending on the hero
+	public void upgrade() {
+		
+		
+	}
+	
+	
+	
+	public void checkDraw(int numOfCards) {
+		//this.freeCardTier
+		
+		
+		drawInfo.drawCard(numOfCards);
 		
 	}
 
@@ -64,6 +84,8 @@ public class Hero extends Card{
 
 	public void addCurrency(Currency currency) {
 		
+		
+		
 		currencyList.add(currency);
 	}
 	
@@ -75,8 +97,15 @@ public class Hero extends Card{
 		}).findFirst().get();
 		
 	
-		cur.addAmount(amount);
+		if(cur == null) {
+			Currency curr = new Currency();
+			curr.setCurrencyTypeEnum(currencyTypeEnum);
+			curr.addAmount(amount);
+			addCurrency(curr);
+		}else {
 		
+			cur.addAmount(amount);
+		}
 	}
 	
 	public void minusAmount(CurrencyTypeEnum currencyTypeEnum ,double amount) {
@@ -99,6 +128,22 @@ public class Hero extends Card{
 		
 	
 		return cur.canBuy(amount);
+	}
+
+	public List<Currency> getCurrencyList() {
+		return currencyList;
+	}
+
+	public void setCurrencyList(List<Currency> currencyList) {
+		this.currencyList = currencyList;
+	}
+
+	public DrawInfo getDrawInfo() {
+		return drawInfo;
+	}
+
+	public void setDrawInfo(DrawInfo drawInfo) {
+		this.drawInfo = drawInfo;
 	}
 	
 	

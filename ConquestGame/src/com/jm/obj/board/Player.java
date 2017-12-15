@@ -74,7 +74,7 @@ public class Player {
 	
 	public void play() {
 		turnNum++;
-		hero.draw(turnNum);
+		hero.checkDraw(turnNum);
 		
 		
 	
