@@ -30,6 +30,8 @@ trigger idea: each card have a list of statuses and abilities.
 			  each action shall always cause this list to be triggered(trigger type should be passed as argument) 
 EventManager?
 
+TYpe
+
 
 Mediator Pattern Use in chats 
 
@@ -64,6 +66,14 @@ sendMsg
 
 
 }
+
+
+Observer pattern:
+When you are interested in the state of an object
+When it changes state all of the dependents are notified
+
+
+
 
 
 
