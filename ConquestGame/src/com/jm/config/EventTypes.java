@@ -12,6 +12,11 @@ public enum EventTypes {
 	END_OF_TURN,
 	CARD_DRAW,
 	
+	
+	
+	
+	
+	
 	;
 	
 	

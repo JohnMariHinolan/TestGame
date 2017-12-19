@@ -27,6 +27,8 @@ public class Hero extends Card{
 	
 	private DrawInfo drawInfo;
 	
+	private int numOfCardsToDraw; 
+	
 	private List<FreeCard> drawedCard;
 	
 	//private List<>
@@ -145,6 +147,9 @@ public class Hero extends Card{
 	public void setDrawInfo(DrawInfo drawInfo) {
 		this.drawInfo = drawInfo;
 	}
-	
-	
+	////hero functions////
+	public void draw() {
+		
+		
+	}
 }
